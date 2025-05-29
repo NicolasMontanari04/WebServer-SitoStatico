@@ -3,7 +3,7 @@ import os
 import mimetypes
 
 SERVER_HOST = '0.0.0.0'
-SERVER_PORT = 8000
+SERVER_PORT = 8080
 
 ROOT = './www'
 
@@ -24,6 +24,7 @@ def handle_request(req):
 
         if method != 'GET':
             req.sendall(b"HTTP/1.1 405 Method Not Allowed\r\n\r\n")
+            print(f"[LOG] returned 405 Method Not Allowed")
             return
 
         if path == '/':
@@ -31,17 +32,20 @@ def handle_request(req):
 
         file_path = os.path.abspath(os.path.join(ROOT, path.lstrip('/')))
 
-        # Sicurezza: impedisci di uscire da ROOT
+        # Prevent exit from ROOT
         if not file_path.startswith(os.path.abspath(ROOT)):
             response = "HTTP/1.1 403 Forbidden\r\nContent-Type: text/html\r\n\r\n<h1>403 Forbidden</h1>"
+            print(f"[LOG] returned 403 Forbidden")
             req.sendall(response.encode())
             return
 
+        # Get file
         if os.path.isfile(file_path):
             with open(file_path, 'rb') as f:
                 content = f.read()
             content_type = get_mime_type(file_path)
             response = f"HTTP/1.1 200 OK\r\nContent-Type: {content_type}\r\nContent-Length: {len(content)}\r\n\r\n"
+            print(f"[LOG] returned 200 OK")
             req.sendall(response.encode() + content)
         else:
             response = "HTTP/1.1 404 Not Found\r\nContent-Type: text/html\r\n\r\n<h1>404 Not Found</h1>"
@@ -63,8 +67,6 @@ def start_server():
         client_connection, client_address = server_socket.accept()
         handle_request(client_connection)
 
-# Press the green button in the gutter to run the script.
+
 if __name__ == '__main__':
     start_server()
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
