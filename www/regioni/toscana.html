@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <title>Toscana</title>
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a href="sicilia.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-left-square" viewBox="0 0 16 16">
+              <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+              <path d="M10.205 12.456A.5.5 0 0 0 10.5 12V4a.5.5 0 0 0-.832-.374l-4.5 4a.5.5 0 0 0 0 .748l4.5 4a.5.5 0 0 0 .537.082z"/>
+            </svg>
+          </a>
+          <a href="../index.html"><span class="navbar-brand mb-0 h1">Toscana</span></a>
+          <a href="trentino.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-right-square" viewBox="0 0 16 16">
+              <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+              <path d="M5.795 12.456A.5.5 0 0 1 5.5 12V4a.5.5 0 0 1 .832-.374l4.5 4a.5.5 0 0 1 0 .748l-4.5 4a.5.5 0 0 1-.537.082z"/>
+            </svg>
+          </a>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <img src="data:image/jpeg;base64,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" class="img-reg rounded d-block"/>
+            
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">Capoluogo di Provincia</th>
+              <th scope="col">Sigla</th>
+              <th scope="col">Superficie (km<sup>2</sup>)</th>
+              <th scope="col">Numero di abitanti</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Firenze</td>
+              <td>FI</td>
+              <td>3,514</td>
+              <td>1,001,880</td>
+            </tr>
+            <tr>
+              <td>Arezzo</td>
+              <td>AR</td>
+              <td>3,235</td>
+              <td>338,724</td>
+            </tr>
+            <tr>
+              <td>Grosseto</td>
+              <td>GR</td>
+              <td>4,504</td>
+              <td>228,715</td>
+            </tr>
+            <tr>
+              <td>Livorno</td>
+              <td>LI</td>
+              <td>1,211</td>
+              <td>335,098</td>
+            </tr>
+            <tr>
+              <td>Lucca</td>
+              <td>LU</td>
+              <td>1,773</td>
+              <td>387,558</td>
+            </tr>
+            <tr>
+              <td>Massa e Carrara</td>
+              <td>MS</td>
+              <td>1,157</td>
+              <td>202,921</td>
+            </tr>
+            <tr>
+              <td>Pisa</td>
+              <td>PI</td>
+              <td>2,448</td>
+              <td>408,557</td>
+            </tr>
+            <tr>
+              <td>Pistoia</td>
+              <td>PT</td>
+              <td>964</td>
+              <td>293,516</td>
+            </tr>
+            <tr>
+              <td>Prato</td>
+              <td>PO</td>
+              <td>97.35</td>
+              <td>257,082</td>
+            </tr>
+            <tr>
+              <td>Siena</td>
+              <td>SI</td>
+              <td>3,821</td>
+              <td>276,344</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center">
+      <h2>Elementi caratteristici</h2>
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://www.braciamiancora.com/wp-content/uploads/2015/08/Bistecca-Fiorentina-Boccanegra-Firenze-5.jpg" class="d-block w-100">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Fiorentina</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://docs.eroica.cc/uploads/block/files/home/6aab93557951907a3360883ef08138fc183907b0.jpg" class="d-block w-100">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Eroica</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://wips.plug.it/cips/initalia.virgilio.it/cms/2020/02/uffizi.jpg" class="d-block w-100">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Uffizi</h5>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Precedente</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Successivo</span>
+        </button>
+      </div>
+    </div>
+    
+    
+</body>
+</html>

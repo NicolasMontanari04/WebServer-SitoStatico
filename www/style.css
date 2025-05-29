@@ -1,0 +1,57 @@
+path{
+    fill: #2A628F;
+    stroke: #13293D; 
+    stroke-width: 0.3px;
+}
+path:hover{
+    cursor: pointer;
+    fill: #3E92CC;
+}
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+path:hover .card {
+    display: block;
+}
+.card{
+    position: absolute;
+    display: none;
+}
+.card-img-top{
+    max-width: 150px;
+    max-height: auto;
+}
+
+.carousel{
+    width: 30vw;
+    height: auto;
+}
+.img-reg{
+    max-width: 40vh;
+    max-height: 40vh;
+    margin-right: 5vw;
+}
+
+h5{
+    background-color: #2487d883;
+    border-radius: 8px;
+    padding: 5px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.d-flex{
+    align-items: center;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+}
