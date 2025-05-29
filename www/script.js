@@ -17,23 +17,3 @@ window.onload = function (){ //viene eseguito quando la pagina si carica
         });
     });
 }
-
-function check(){
-    trueAnswers = document.getElementsByClassName("true"); //risposte vere
-    falseAnswers = document.getElementsByClassName("false"); //risposte false
-    var point=0; //contatore punti
-    for (const child of trueAnswers) { //coloro le risposte giuste di verde
-        child.style.color = "#40ce23"
-    }
-    for (const child of falseAnswers) { //coloro le risposte sbagliate di rosso
-        child.style.color = "#ce2323"
-    }
-
-    trueRadio = document.getElementsByClassName("rtrue"); //radio button giusti
-    for (const child of trueRadio) { //quelli checkati giusti li conto nel punteggio
-        if(child.checked){
-            point++;
-        }
-    }
-    document.getElementById("res").innerHTML=`Punteggio: ${point}` //stampo il punteggio
-}
